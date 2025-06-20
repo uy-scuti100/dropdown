@@ -1,8 +1,9 @@
 import { Communtiy, Help, Profile, Settings, SignOut, Sub } from "@/svgs";
+import type { ReactNode } from "react";
 
 type OPTIONS_TYPE = {
 	name: string;
-	label: JSX.Element;
+	label: ReactNode;
 };
 export const options: OPTIONS_TYPE[] = [
 	{
