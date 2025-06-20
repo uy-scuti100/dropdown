@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import { Plus } from "@/svgs";
-import { footerOptions, options } from "@/constants";
-import { ProBadge } from "@/components";
+import { Plus } from "../../svgs";
+import { footerOptions, options } from "../../constants";
+import { ProBadge } from "../../components";
 const ACTIVE_HOVER_STYLE = "bg-[#f2f2f2] rounded-[12px]";
 
 export default function Home() {

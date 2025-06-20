@@ -1,4 +1,4 @@
-import { Communtiy, Help, Profile, Settings, SignOut, Sub } from "@/svgs";
+import { Communtiy, Help, Profile, Settings, SignOut, Sub } from "../svgs";
 import type { ReactNode } from "react";
 
 type OPTIONS_TYPE = {

@@ -1,4 +1,4 @@
-import { Lightening } from "@/svgs";
+import { Lightening } from "../svgs";
 
 export default function ProBadge() {
 	return (

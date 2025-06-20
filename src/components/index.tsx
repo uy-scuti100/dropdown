@@ -1,1 +1,1 @@
-export { default as ProBadge } from "@/components/probadge";
+export { default as ProBadge } from "../components/probadge";
