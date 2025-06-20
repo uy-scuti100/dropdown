@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: Inter;
+	src: url("./font/Inter-Medium.otf"), format("otf");
+}
+@font-face {
+	font-family: SF Pro;
+	src: url("./font/SF-Pro-Display-Semibold.otf"), format("otf");
+}
+@font-face {
+	font-family:
+		Inter Display,
+		"sans-serif";
+	src: url("./font/InterDisplay-Bold.ttf"), format("ttf");
+}
+
+@theme {
+	--font-inter: Inter, "sans-serif";
+	--font-sf-pro: SF Pro, "sans-serif";
+	--font-inter-display: Inter Display, "sans-serif";
+}
+@layer utilities {
+	.scrollbar::-webkit-scrollbar {
+		width: 20px;
+		height: 20px;
+	}
+	.inside-stroke {
+		position: relative;
+		border: 1px solid #e5e5e5;
+		overflow: hidden;
+		box-shadow:
+			inset 0 -1px 1.3px 0 rgba(0, 0, 0, 0.2),
+			0 61px 17px 0 rgba(0, 0, 0, 0),
+			0 39px 16px 0 rgba(0, 0, 0, 0.01),
+			0 22px 13px 0 rgba(0, 0, 0, 0.02),
+			0 10px 10px 0 rgba(0, 0, 0, 0.04),
+			0 2px 5px 0 rgba(0, 0, 0, 0.04);
+	}
+
+	.inside-stroke::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		z-index: -1;
+
+		background: linear-gradient(
+			to bottom,
+			rgba(229, 229, 229, 1),
+			rgba(229, 229, 229, 0)
+		);
+	}
+}
