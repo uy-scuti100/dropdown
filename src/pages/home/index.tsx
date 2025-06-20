@@ -85,14 +85,13 @@ export default function Home() {
 								tabIndex={0}
 								className={`flex items-center justify-between p-2 transition duration-200 ease-in-out cursor-pointer ${
 									activeIndex === index ? ACTIVE_HOVER_STYLE : ""
-								} hover:bg-[#f2f2f2] hover:rounded-[12px]`}
+								} hover:bg-[#f2f2f2] hover:rounded-[12px] ${
+									isOpen ? "animate-slideDown" : ""
+								}`}
 								onClick={() => setActiveIndex(index)}
 								onKeyDown={(e) => handleKeyDown(e, index)}
 								style={{
 									animationDelay: isOpen ? `${index * 50}ms` : "0ms",
-									animation: isOpen
-										? "slideDown 0.3s ease-out forwards"
-										: "none",
 								}}
 							>
 								<div className="flex items-center gap-2">
@@ -128,16 +127,15 @@ export default function Home() {
 										activeIndex === options.length + index
 											? ACTIVE_HOVER_STYLE
 											: ""
-									} hover:bg-[#f2f2f2] hover:rounded-[12px]`}
+									} hover:bg-[#f2f2f2] hover:rounded-[12px] ${
+										isOpen ? "animate-slideDown" : ""
+									}`}
 									onClick={() => setActiveIndex(options.length + index)}
 									onKeyDown={(e) => handleKeyDown(e, options.length + index)}
 									style={{
 										animationDelay: isOpen
 											? `${(options.length + index) * 50}ms`
 											: "0ms",
-										animation: isOpen
-											? "slideDown 0.3s ease-out forwards"
-											: "none",
 									}}
 								>
 									<div className="flex items-center gap-2">
@@ -153,19 +151,6 @@ export default function Home() {
 					</ul>
 				</nav>
 			</div>
-
-			<style>{`
-				@keyframes slideDown {
-					from {
-						opacity: 0;
-						transform: translateY(-10px);
-					}
-					to {
-						opacity: 1;
-						transform: translateY(0);
-					}
-				}
-			`}</style>
 		</div>
 	);
 }

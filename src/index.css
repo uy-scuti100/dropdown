@@ -54,4 +54,19 @@
 			rgba(229, 229, 229, 0)
 		);
 	}
+
+	.animate-slideDown {
+		animation: slideDown 0.2s ease-out forwards;
+	}
+
+	@keyframes slideDown {
+		from {
+			/* opacity: 0; */
+			transform: translateY(-5px);
+		}
+		to {
+			/* opacity: 1; */
+			transform: translateY(0);
+		}
+	}
 }
